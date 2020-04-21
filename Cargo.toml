@@ -1,0 +1,16 @@
+[package]
+name = "hue-cli"
+version = "0.1.0"
+authors = ["kikei <fujii@xaxxi.net>"]
+edition = "2018"
+
+[dependencies]
+config = "0.10"
+dirs = "1.0"
+structopt = "0.3"
+philipshue = { path = "../philipshue" }
+
+# [dependencies.philipshue]
+# version = "*"
+# default-features = false
+# features = ["upnp"]
