@@ -22,7 +22,9 @@ struct Args {
 
 #[derive(StructOpt, Debug)]
 enum Command {
+    /// Discover bridge
     Discover,
+    /// Register device and get user id
     Register {
         /// Host to register user
         #[structopt(short, long)]
@@ -32,6 +34,7 @@ enum Command {
         #[structopt(short, long = "device-type")]
         device_type: String
     },
+    /// Show lights
     Show {
         /// Host of bridge
         #[structopt(short, long)]
@@ -45,6 +48,7 @@ enum Command {
         #[structopt(short, long)]
         id: Option<usize>,
     },
+    /// Control light(s)
     Light {
         /// Host of bridge
         #[structopt(short, long)]
